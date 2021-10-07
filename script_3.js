@@ -32,9 +32,34 @@ window.addEventListener('load',
     function () {
 
         let lastScrollPoint = 0
+        let entities = ["prototype", "mission", "digital service", "open platform"]
+        let index = 0
+        let endings = ["spark new laundry innovation routes ", "imagine fresh laundry experiences", "transform dirty laundry into valuable data", "enable the future laundry business ecosystem"]
 
-        $('h1').click(()=>{
-                            splatStack.push(parseInt(Math.random() * 20) + 5);
+        $('#adlib-entity').click(() => {
+
+            $("#adlib-entity").text(entities[index])
+
+            index = (index+1)%entities.length
+          
+
+            $("#adlib-ending").animate({
+                opacity: "0.0"
+            }, {
+                duration: 250,
+                complete: function () {
+                    splatStack.push(parseInt(Math.random() * 20) + 5);
+
+                    $("#adlib-ending").text(endings[Math.floor(Math.random() * endings.length)]);
+                    $("#adlib-ending").animate({
+                        opacity: "1.0"
+                    }, {
+                        duration: 750
+                    });
+
+                }
+            });
+
 
         })
 
