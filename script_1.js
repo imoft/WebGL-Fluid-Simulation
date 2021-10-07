@@ -24,32 +24,7 @@ SOFTWARE.
 
 'use strict';
 
-// Mobile promo section
 
-const promoPopup = document.getElementsByClassName('promo')[0];
-const promoPopupClose = document.getElementsByClassName('promo-close')[0];
-
-if (isMobile()) {
-    setTimeout(() => {
-        promoPopup.style.display = 'table';
-    }, 20000);
-}
-
-promoPopupClose.addEventListener('click', e => {
-    promoPopup.style.display = 'none';
-});
-
-const appleLink = document.getElementById('apple_link');
-appleLink.addEventListener('click', e => {
-    ga('send', 'event', 'link promo', 'app');
-    window.open('https://apps.apple.com/us/app/fluid-simulation/id1443124993');
-});
-
-const googleLink = document.getElementById('google_link');
-googleLink.addEventListener('click', e => {
-    ga('send', 'event', 'link promo', 'app');
-    window.open('https://play.google.com/store/apps/details?id=games.paveldogreat.fluidsimfree');
-});
 
 // Simulation section
 
@@ -58,7 +33,7 @@ resizeCanvas();
 
 let config = {
     SIM_RESOLUTION: 128,
-    DYE_RESOLUTION: 1024,
+    DYE_RESOLUTION: 512,
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 1,
     VELOCITY_DISSIPATION: 0.2,
@@ -82,10 +57,10 @@ let config = {
     SUNRAYS: true,
     SUNRAYS_RESOLUTION: 196,
     SUNRAYS_WEIGHT: 1.0,
-    PALETTE_COLOR_1: { r: 192, g: 159, b: 55 },
-    PALETTE_COLOR_2: { r: 25, g: 25, b: 155 },
-    PALETTE_COLOR_3: { r: 55, g: 125, b: 0 },
-    PALETTE_COLOR_4: { r: 255, g: 125, b: 215 },
+    PALETTE_COLOR_1: { r: 130, g: 99, b: 86 },
+    PALETTE_COLOR_2: { r: 91, g: 77, b: 113 },
+    PALETTE_COLOR_3: { r: 83, g: 95, b: 73 },
+    PALETTE_COLOR_4: { r: 57, g: 83, b: 168 },
 }
 
 function pointerPrototype () {
@@ -117,7 +92,7 @@ if (!ext.supportLinearFiltering) {
     config.SUNRAYS = false;
 }
 
-startGUI();
+// startGUI();
 
 function getWebGLContext (canvas) {
     const params = { alpha: true, depth: false, stencil: false, antialias: false, preserveDrawingBuffer: false };
