@@ -32,7 +32,7 @@ window.addEventListener('load',
     function () {
 
         let lastScrollPoint = 0
-        let entities = ["prototype", "mission", "digital service", "data platform", "venture builder", "laundry system", "recommendation app", "gamified currency", "laundry system"]
+        let entities = ["prototype", "mission", "digital service", "data platform", "venture builder", "recommendation app", "gamified currency", "laundry system"]
         let index = 0
         let endings = ["to spark new laundry innovation routes at Henkel", "to imagine shared laundry experiences", "to transform dirty laundry into valuable data", "to openly enable the future laundry ecosystem", "to create laundry startups with positive impact", "to connect people to sustainable fashion", "to make laundry more eco-conscious", "using data to spark the sinner circle reinvention", ]
         $("#adlib-entity").text(entities[index])
