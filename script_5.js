@@ -32,9 +32,9 @@ window.addEventListener('load',
     function () {
 
         let lastScrollPoint = 0
-        let entities = ["prototype", "mission", "digital service", "platform", "venture builder", "laundry system", "social tech"]
+        let entities = ["prototype", "mission", "digital service", "data platform", "venture builder", "laundry system", "recommendation app", "gamified currency"]
         let index = 0
-        let endings = ["spark new laundry innovation routes at Henkel", "imagine fresh laundry experiences", "transform dirty laundry into valuable data", "openly enable the future laundry ecosystem", "create laundry businesses with positive impact", "using data to spark the sinner circle reinvention", "bring healthy wash against junk clothes"]
+        let endings = ["spark new laundry innovation routes at Henkel", "imagine shared laundry experiences", "transform dirty laundry into valuable data", "openly enable the future laundry ecosystem", "create laundry startups with positive impact", "using data to spark the sinner circle reinvention", "connect people to sustainable fashion", "make laundry more eco-conscious"]
 
         $('#adlib-entity').click(() => {
 
