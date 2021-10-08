@@ -36,7 +36,22 @@ window.addEventListener('load',
         let index = 0
         let endings = ["to spark new laundry innovation routes at Henkel", "to imagine shared laundry experiences", "to transform dirty laundry into valuable data", "to openly enable the future laundry ecosystem", "to create laundry startups with positive impact", "using data to spark the sinner circle reinvention", "to connect people to sustainable fashion", "to make laundry more eco-conscious"]
         $("#adlib-entity").text(entities[index])
+        $("#adlib-ending").animate({
+            opacity: "0.0"
+        }, {
+            duration: 250,
+            complete: function () {
+                splatStack.push(parseInt(Math.random() * 20) + 5);
 
+                $("#adlib-ending").text(endings[Math.floor(Math.random() * endings.length)]);
+                $("#adlib-ending").animate({
+                    opacity: "1.0"
+                }, {
+                    duration: 750
+                });
+
+            }
+        });
         $('#adlib-entity').click(() => {
             index = (index+1)%entities.length
 
