@@ -54,7 +54,12 @@ window.addEventListener('load',
         });
         $('#adlib-entity').click(() => {
             index = (index+1)%entities.length
-
+            
+            if(index == 0){
+               $("#connector").text("is a");   
+            } else {
+               $("#connector").text("can be a");
+            }
             $("#adlib-entity").text(entities[index])
 
           
